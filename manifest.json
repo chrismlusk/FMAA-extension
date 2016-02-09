@@ -17,8 +17,8 @@
                 "https://*/*",
                 "file://*/*"
             ],
-            "js": ["fmaa.js"],
-            "run_at": "document_start",
+            "js": ["script.js"],
+            "run_at": "document_end",
             "all_frames": true
         }
     ],
