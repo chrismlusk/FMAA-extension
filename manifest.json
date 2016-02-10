@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Friendship Madness",
-	"description": "It's not March Madness; it's Friendship Madness. Update the web to reflect this.",
+	"description": "It's not March Madness; it's Friendship Madness. Let's make the web friendlier.",
 	"version": "1.0",
 	"author": "Chris Lusk",
 
@@ -17,7 +17,6 @@
                 "file://*/*"
             ],
             "js": [
-                // "js/jquery.min.js",
                 "js/script.js"
             ],
             "run_at": "document_end",

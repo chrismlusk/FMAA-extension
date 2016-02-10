@@ -8,16 +8,14 @@
 //     { a: "Final Four", b: "Friendly Four" },
 //     { a: "Bracketology", b: "Friendology" }
 
-// ];
-
 // for (var i = 0; i < myObj.length; i++) {
 //     var words = myObj[i];
 //     document.body.innerHTML = document.body.innerHTML.replace(new RegExp(words.a, "g"), words.b);
 // }
 
 
-
 /* -- BETTER -- */
+replaceText(document.body);
 
 function replaceText(scope) {
     var nodes;
@@ -27,11 +25,9 @@ function replaceText(scope) {
         for (var i = 0; i < nodes.length; i++) {
             node = nodes[i];
             if (node.nodeType === 3) {
-                //is a text node
                 checkTextNode(node);
             }
             if (node.childNodes) {
-                //loop through child nodes if child nodes are found
                 replaceText(node);
             }
             node = null;
@@ -40,27 +36,19 @@ function replaceText(scope) {
     }
 }
 
-
 function checkTextNode(node) {
-    var newText = "Friendship Madness";
-    var oldText = /March Madness/g;
-    var text = node.data;
-    var test = oldText.test(text);
-
-    if (test) {
-        //match found, replace node's textual data with specified string
-        node.data = text.replace(oldText, newText);
-        newText = null;
-        text = null;
+    var newText = [
+        "Friendship Madness",
+        "FMAA",
+        "Friendly Four"
+    ];
+    var oldText = [
+        /March Madness/gi,
+        /NCAA/g,
+        /Final Four/g
+    ];
+    for (var i = 0; i < oldText.length; i++) {
+        var text = node.data;
+        node.data = text.replace(oldText[i], newText[i]);
     }
-    test = null;
 }
-
-replaceText(document.body);
-
-
-
-/* -- BEST -- */
-
-// ??????????
-
