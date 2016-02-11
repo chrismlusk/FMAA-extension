@@ -40,12 +40,14 @@ function checkTextNode(node) {
     var newText = [
         "Friendship Madness",
         "FMAA",
-        "Friendly Four"
+        "Friendly Four",
+        "Friendology"
     ];
     var oldText = [
-        /March Madness/gi,
-        /NCAA/g,
-        /Final Four/g
+        /\bMarch Madness\b/gi,
+        /\bNCAA\b/g,
+        /\bFinal Four\b/g,
+        /\bBracketology\b/g
     ];
     for (var i = 0; i < oldText.length; i++) {
         var text = node.data;
