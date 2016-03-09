@@ -1,15 +1,13 @@
 {
-	"manifest_version": 2,
-	"name": "Friendship Madness",
+    "name": "Friendship Madness",
 	"description": "It's not March Madness; it's Friendship Madness. Let's make the web friendlier.",
-	"version": "1.0",
+	"version": "0.5",
+    "manifest_version": 2,
 	"author": "Chris Lusk",
-
-	"browser_action": {
-		// "default_popup": "popup.html",
-		"default_title": "Let's get friendly."
-	},
-	"content_scripts": [
+    "browser_action": {
+        "default_title": "Make the web friendlier."
+    },
+    "content_scripts": [
         {
             "matches": [
                 "http://*/*",

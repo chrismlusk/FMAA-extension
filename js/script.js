@@ -1,20 +1,3 @@
-/* -- BAD -- */
-
-// var myObj = [
-
-//     { a: "March Madness", b: "Friendship Madness" },
-//     { a: "NCAA", b: "FMAA" },
-//     { a: "men's basketball tournament", b: "best friend tournament"},
-//     { a: "Final Four", b: "Friendly Four" },
-//     { a: "Bracketology", b: "Friendology" }
-
-// for (var i = 0; i < myObj.length; i++) {
-//     var words = myObj[i];
-//     document.body.innerHTML = document.body.innerHTML.replace(new RegExp(words.a, "g"), words.b);
-// }
-
-
-/* -- BETTER -- */
 replaceText(document.body);
 
 function replaceText(scope) {
