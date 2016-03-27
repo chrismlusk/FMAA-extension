@@ -30,21 +30,36 @@ function findAndReplace(node)
     }
 }
 
-function handleText(textNode) 
+function handleText(textNode)
 {
-    var v = textNode.nodeValue;
-
-    v = v.replace(/\bMarch Madness\b/g, "Friendship Madness");
-    v = v.replace(/\bNCAA\b/g, "FMAA");
-    v = v.replace(/\bFinal Four\b/g, "Friendly Four");
-    v = v.replace(/\bthe Sooners\b/g, "the Calannis");
-    v = v.replace(/\bThe Sooners\b/g, "The Calannis");
-    v = v.replace(/\bthe Wildcats\b/g, "the Rutledges");
-    v = v.replace(/\bThe Wildcats\b/g, "The Rutledges");
-    v = v.replace(/\bthe Tar Heels\b/g, "the Lusks");
-    v = v.replace(/\bThe Tar Heels\b/g, "The Lusks");
-    v = v.replace(/\bthe Cavaliers\b/g, "the Lovetts");
-    v = v.replace(/\bThe Cavaliers\b/g, "The Lovetts");
-    
-    textNode.nodeValue = v;
+    var newText = [
+        "Friendship Madness",
+        "FMAA",
+        "Friendly Four",
+        "the Calannis",
+        "The Calannis",
+        "the Rutledges",
+        "The Rutledges",
+        "the Lusks",
+        "The Lusks",
+        "the Lovetts",
+        "The Lovetts"
+    ];
+    var oldText = [
+        /\bMarch Madness\b/gi,
+        /\bNCAA\b/gi,
+        /\bFinal Four\b/gi,
+        /\bthe Sooners\b/gi,
+        /\bThe Sooners\b/gi,
+        /\bthe Wildcats\b/gi,
+        /\bThe Wildcats\b/gi,
+        /\bthe Tar Heels\b/gi,
+        /\bThe Tar Heels\b/gi,
+        /\bthe Cavaliers\b/gi,
+        /\bThe Cavaliers\b/gi
+    ];
+    for (var i = 0; i < oldText.length; i++) {
+        var text = textNode.nodeValue;
+        textNode.nodeValue = text.replace(oldText[i], newText[i]);
+    }
 }
