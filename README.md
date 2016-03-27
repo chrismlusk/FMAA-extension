@@ -6,4 +6,4 @@ A Chrome extension to make the web friendlier for [Friendship Madness] (http://f
 Installation
 ------------
 
-Download this extension from the Chrome Web Store.
+Download this extension from the [Chrome Web Store](https://chrome.google.com/webstore/detail/friendship-madness/ljeefnijldbmngpomnkdiklijedmkmck).
