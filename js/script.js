@@ -1,47 +1,38 @@
 findAndReplace(document.body);
 
-function findAndReplace(node) 
-{
-    
-    var child, next;
-    
-    if (node.tagName.toLowerCase() == 'input' || node.tagName.toLowerCase() == 'textarea'
-        || node.classList.indexOf('ace_editor') > -1) {
-        return;
-    }
-
-    switch ( node.nodeType )  
-    {
-        case 1:  // Element
-        case 9:  // Document
-        case 11: // Document fragment
-            child = node.firstChild;
-            while ( child ) 
-            {
-                next = child.nextSibling;
-                findAndReplace(child);
-                child = next;
+function findAndReplace(scope) {
+    var nodes, node, child, next;
+    if ( scope.childNodes ) {
+        nodes = scope.childNodes;
+        for ( var i = 0; i < nodes.length; i++ ) {
+            node = nodes[i];
+            if ( node.nodeType === 3 ) {
+                handleText(node);
             }
-            break;
-
-        case 3: // Text node
-            handleText(node);
-            break;
+            if ( node.childNodes ) {
+                findAndReplace(node);
+            }
+            node = null;
+        }
+        nodes = null;
     }
 }
 
-function handleText(textNode)
-{
+function handleText(textNode) {
     var newText = [
         "Friendship Madness",
         "FMAA",
         "Friendly Four",
+        "Max Calanni",
         "the Calannis",
         "The Calannis",
+        "Katie Rutledge",
         "the Rutledges",
         "The Rutledges",
+        "Chris Lusk",
         "the Lusks",
         "The Lusks",
+        "Jake Lovett",
         "the Lovetts",
         "The Lovetts"
     ];
@@ -49,12 +40,16 @@ function handleText(textNode)
         /\bMarch Madness\b/gi,
         /\bNCAA\b/gi,
         /\bFinal Four\b/gi,
+        /\bLon Kruger\b/gi,
         /\bthe Sooners\b/gi,
         /\bThe Sooners\b/gi,
+        /\bJay Wright\b/gi,
         /\bthe Wildcats\b/gi,
         /\bThe Wildcats\b/gi,
+        /\bRoy Williams\b/gi,
         /\bthe Tar Heels\b/gi,
         /\bThe Tar Heels\b/gi,
+        /\bTony Bennett\b/gi,
         /\bthe Cavaliers\b/gi,
         /\bThe Cavaliers\b/gi
     ];
