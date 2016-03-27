@@ -1,8 +1,8 @@
 {
-    "name": "Friendship Madness",
-	"description": "It's not March Madness; it's Friendship Madness. Let's make the web friendlier.",
-	"version": "0.5",
     "manifest_version": 2,
+    "name": "Friendship Madness",
+    "version": "1.0",
+	"description": "It's not March Madness; it's Friendship Madness. Let's make the web friendlier.",
 	"author": "Chris Lusk",
     "browser_action": {
         "default_title": "Make the web friendlier."
@@ -10,9 +10,7 @@
     "content_scripts": [
         {
             "matches": [
-                "http://*/*",
-                "https://*/*",
-                "file://*/*"
+                "*://*/*"
             ],
             "js": [
                 "js/script.js"
