@@ -1,0 +1,48 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 1rem;
+  white-space: nowrap;
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+
+p:not(:last-of-type) {
+  margin-bottom: 1em;
+}
+
+.button {
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #337ab7;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  justify-content: center;
+  outline: none;
+  padding: 0.75em 1em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #2d9beb;
+}

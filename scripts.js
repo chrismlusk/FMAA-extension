@@ -14,17 +14,17 @@ const TEXT_SWAP = [
   // [ /\b\b/g, "" ],
 ];
 
-var elements = document.getElementsByTagName("*");
+let elements = document.getElementsByTagName("*");
 
-for (var i = 0; i < elements.length; i++) {
-  var element = elements[i];
+for (let i = 0; i < elements.length; i++) {
+  let element = elements[i];
 
-  for (var j = 0; j < element.childNodes.length; j++) {
-    var node = element.childNodes[j];
+  for (let j = 0; j < element.childNodes.length; j++) {
+    let node = element.childNodes[j];
 
     if (node.nodeType === 3) {
-      for (var k = 0; k < TEXT_SWAP.length; k++) {
-        var text = node.nodeValue;
+      for (let k = 0; k < TEXT_SWAP.length; k++) {
+        let text = node.nodeValue;
         node.nodeValue = text.replace(TEXT_SWAP[k][0], TEXT_SWAP[k][1]);
       }
     }
