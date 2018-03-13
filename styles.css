@@ -2,20 +2,30 @@ html {
   font-size: 16px;
 }
 
-body {
-  margin: 1rem;
-  white-space: nowrap;
-}
-
 h1 {
   font-size: 1.25rem;
+  margin: 0 0 .5rem;
+}
+
+p {
+  margin: 0;
 }
 
 p:not(:last-of-type) {
   margin-bottom: 1em;
 }
 
-.button {
+.fm-body {
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.fm-main {
+  margin: 1rem;
+  min-width: 500px;
+}
+
+.fm-button {
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -23,26 +33,19 @@ p:not(:last-of-type) {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  justify-content: center;
   outline: none;
   padding: 0.75em 1em;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
   touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  transition: all 250ms ease-in-out;
   user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
-.button:hover,
-.button:focus {
+.fm-button:hover,
+.fm-button:focus {
   background-color: #2d9beb;
 }
