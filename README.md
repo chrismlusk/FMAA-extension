@@ -1,6 +1,6 @@
 # Friendship Madness
 
-A Chrome extension to make the web friendlier for [Friendship Madness] (http://friendshipmadness.com/) players.
+A Chrome extension to make the web friendlier for [Friendship Madness](http://friendshipmadness.com/) players.
 
 ## Installation
 
