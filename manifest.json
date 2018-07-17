@@ -5,6 +5,8 @@
   "description": "Make the web friendlier, y'all.",
   "author": "Chris Lusk",
 
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+
   "browser_action": {
     "default_icon": {
       "16": "images/icon16.png",
@@ -15,17 +17,18 @@
     "default_popup": "popup.html"
   },
 
-  "content_scripts": [{
-    "css": ["styles.css"],
-    "js": ["scripts.js"],
-    "matches": ["*://*/*"],
-    "exclude_matches": ["*://friendshipmadness.com/*"],
-    "run_at": "document_end",
-    "all_frames": true
-  }],
+  "content_scripts": [
+    {
+      "css": ["styles.css"],
+      "js": ["main.js"],
+      "matches": ["*://*/*"],
+      "exclude_matches": ["*://friendshipmadness.com/*"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
 
-  "icons":
-  {
+  "icons": {
     "16": "images/icon16.png",
     "24": "images/icon24.png",
     "32": "images/icon32.png",
@@ -34,8 +37,8 @@
     "128": "images/icon128.png"
   },
 
-  "permissions": [
-    "activeTab",
-    "storage"
-  ]
+  "background": {
+    "scripts": ["scripts.js"],
+    "persistent": false
+  }
 }
